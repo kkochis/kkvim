@@ -53,3 +53,9 @@ set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
 " Add the hive filetype for Hive SQL of course
 au BufRead,BufWrite *.hive set filetype=hive
 
+" makes trailing whitespace show up as red
+highlight TrailingWhiteSpace ctermbg=red ctermfg=white
+match TrailingWhiteSpace / \+$/
+
+" automatically reload vimrc when it's saved
+au BufWritePost .vimrc so ~/.vimrc

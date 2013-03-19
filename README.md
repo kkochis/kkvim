@@ -3,6 +3,6 @@ kkvim
 
 rm -rf ~/.vimrc ~/.vim
 
-ln -s ~/kkvim/.vimrc
+ln -s ~/kkvim/.vimrc ~/.vimrc
 
-ln -s ~/kkvim/.vim
+ln -s ~/kkvim/.vim ~/.vim
