@@ -59,3 +59,7 @@ match TrailingWhiteSpace / \+$/
 
 " automatically reload vimrc when it's saved
 au BufWritePost .vimrc so ~/.vimrc
+
+" Plugins here
+call pathogen#infect()
+
