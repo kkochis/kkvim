@@ -60,6 +60,11 @@ match TrailingWhiteSpace / \+$/
 " automatically reload vimrc when it's saved
 au BufWritePost .vimrc so ~/.vimrc
 
+set tags=./.tags;/
+
 " Plugins here
 call pathogen#infect()
+
+let NERDTreeShowHidden=1
+map <C-n> :NERDTreeToggle<CR>
 

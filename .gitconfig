@@ -1,0 +1,10 @@
+[core]
+    editor = vim
+	excludesfile = ~/.gitignore
+
+[user]
+    name = Kyle Kochis
+    email = kylekochis@gmail.com
+
+[color]
+    ui = auto
