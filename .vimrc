@@ -2,6 +2,8 @@
 " General Editor Settings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+let mapleader=","
+
 syntax enable
 set number
 set nocompatible
@@ -64,6 +66,8 @@ set tags=./.tags;/
 
 " Plugins here
 call pathogen#infect()
+
+call pathogen#helptags()
 
 let NERDTreeShowHidden=1
 map <C-n> :NERDTreeToggle<CR>
