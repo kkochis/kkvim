@@ -1,12 +1,31 @@
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" General Editor Settings
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""
+" Vim Config
+""""""""""""
 
+""""""""""
+" Pathogen
+""""""""""
+filetype off " Avoid a Vim/Pathogen bug
+call pathogen#infect()
+call pathogen#helptags()
+" call pathogen#runtime_append_all_bundles()
+
+
+"""""""""""""""""""""""""
+" General Editor Settings
+"""""""""""""""""""""""""
+
+set nocompatible " Don't maintain compatibility with vi
 let mapleader=","
 
 syntax enable
+filetype plugin indent on
+
+" Source initialization files
+runtime! init/**.vim
+
+set background=dark
 set number
-set nocompatible
 set encoding=utf-8
 set laststatus=2
 set tabstop=4
@@ -25,15 +44,19 @@ set ttyfast
 set backspace=indent,eol,start
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 
-" Search behaviour
+" cursor line and column
+set cursorcolumn
+set cursorline
+hi CursorLine cterm=NONE ctermbg=238
+hi CursorColumn cterm=NONE ctermbg=238
 
+" Search behaviour
 set incsearch
 set hlsearch
 set ignorecase
 set smartcase
 
 " Fix annoyances in smart indent
-
 set autoindent                              "Retain indentation on next line
 set smartindent                             "Turn on autoindenting of blocks
 
@@ -55,19 +78,22 @@ set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
 " Add the hive filetype for Hive SQL of course
 au BufRead,BufWrite *.hive set filetype=hive
 
+" Add the mason filetype :(
+au BufRead,BufNewFile *.md set filetype=mason
+au BufRead,BufNewFile *.mh set filetype=mason
+au BufRead,BufNewFile *.md syntax sync fromstart
+au BufRead,BufNewFile *.mh syntax sync fromstart
+
 " makes trailing whitespace show up as red
 highlight TrailingWhiteSpace ctermbg=red ctermfg=white
 match TrailingWhiteSpace / \+$/
 
-" automatically reload vimrc when it's saved
-au BufWritePost .vimrc so ~/.vimrc
-
 set tags=./.tags;/
 
-" Plugins here
-call pathogen#infect()
+set fileformat=unix
+set nolist
 
-call pathogen#helptags()
+let g:ctrlp_max_files = 20000
 
 let NERDTreeShowHidden=1
 map <C-n> :NERDTreeToggle<CR>
