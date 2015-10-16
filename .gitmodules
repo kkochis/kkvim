@@ -1,6 +1,3 @@
-[submodule "better-snipmate-snippets"]
-	path = better-snipmate-snippets
-	url = /home/kkochis/.vim/bundle/better-snipmate-snippets
 [submodule ".vim/bundle/better-snipmate-snippets"]
 	path = .vim/bundle/better-snipmate-snippets
 	url = git://github.com/bartlomiejdanek/better-snipmate-snippets.git
