@@ -47,8 +47,11 @@ set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 " cursor line and column
 set cursorcolumn
 set cursorline
-hi CursorLine cterm=NONE ctermbg=238
-hi CursorColumn cterm=NONE ctermbg=238
+hi CursorLine cterm=NONE ctermbg=darkgray
+hi CursorColumn cterm=NONE ctermbg=darkgray
+
+" ruler settings
+set ruler
 
 " Search behaviour
 set incsearch
@@ -75,6 +78,9 @@ set wildignore+=*.o,*.out,*.obj,.git,*.rbc,*.rbo,*.class,.svn,*.gem,*.pyc,*.pyo
 " Disable archive files
 set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
 
+" Disable virtualenv files
+set wildignore+=*/venv/*,*/ENV/*
+
 " Add the hive filetype for Hive SQL of course
 au BufRead,BufWrite *.hive set filetype=hive
 
@@ -93,8 +99,13 @@ set tags=./.tags;/
 set fileformat=unix
 set nolist
 
+set backupdir=~/.vim/backup_files//
+set directory=~/.vim/swap_files//
+set undodir=~/.vim/undo_files//
+
 let g:ctrlp_max_files = 20000
 
 let NERDTreeShowHidden=1
 map <C-n> :NERDTreeToggle<CR>
 
+map <C-t> :tabnew<CR>
