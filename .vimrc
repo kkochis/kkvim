@@ -47,8 +47,8 @@ set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 " cursor line and column
 set cursorcolumn
 set cursorline
-hi CursorLine cterm=NONE ctermbg=darkgray
-hi CursorColumn cterm=NONE ctermbg=darkgray
+hi CursorLine cterm=NONE ctermbg=235
+hi CursorColumn cterm=NONE ctermbg=235
 
 " ruler settings
 set ruler
