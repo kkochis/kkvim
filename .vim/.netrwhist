@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/opt/git/saru_tusko_backend/insights'
-let g:netrw_dirhist_2='/opt/git/saru_tusko_backend/insights/rules'
-let g:netrw_dirhist_3='/opt/git/saru_tusko_backend/insights'
-let g:netrw_dirhist_4='/opt/git/saru_tusko_backend/insights/rules'
-let g:netrw_dirhist_5='/opt/git/saru_tusko_backend/insights'
-let g:netrw_dirhist_6='/opt/git/saru_tusko_backend/insights/rules'

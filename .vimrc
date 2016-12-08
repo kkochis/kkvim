@@ -82,7 +82,7 @@ set wildignore+=*.zip,*.tar.gz,*.tar.bz2,*.rar,*.tar.xz
 set wildignore+=*/venv/*,*/ENV/*
 
 " Add the hive filetype for Hive SQL of course
-au BufRead,BufWrite *.hive set filetype=hive
+au BufRead,BufWrite *.hql set filetype=hive
 
 " Add the mason filetype :(
 au BufRead,BufNewFile *.md set filetype=mason
@@ -98,6 +98,7 @@ set tags=./.tags;/
 
 set fileformat=unix
 set nolist
+set splitright
 
 set backupdir=~/.vim/backup_files//
 set directory=~/.vim/swap_files//
